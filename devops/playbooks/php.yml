@@ -1,0 +1,22 @@
+---
+
+
+- hosts: all
+  user: $user
+  sudo: true
+
+
+  tasks:
+    - name: Install PHP
+      apt: name={{ item }} state=installed
+      with_items:
+       - php5
+       - libapache2-mod-php5
+       - php5-mcrypt
+
+    - name: deploy dir.conf
+      template: src=files/dir.conf.template dest=/etc/apache2/mods-enabled/dir.conf mode=0777
+
+    - name: restart apache2
+      command: service apache2 restart
+

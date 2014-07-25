@@ -1,0 +1,15 @@
+---
+
+
+- hosts: vagrant
+  user: $user
+  sudo: true
+
+
+  tasks:
+    - name: Install Mysql package
+      apt: name={{ item }} state=installed
+      with_items:
+       - mysql-server
+       - libapache2-mod-auth-mysql
+       - php5-mysql

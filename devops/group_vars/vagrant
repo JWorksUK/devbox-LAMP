@@ -1,0 +1,8 @@
+---
+# Virtual Host File
+serveradmin: admin@example.com
+servername: www.example.dev
+serveralias: example.dev
+documentroot: /var/www/site/www
+
+user: vagrant

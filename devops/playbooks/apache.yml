@@ -1,0 +1,16 @@
+---
+
+# Shit that we need to happen up front.
+- hosts: all
+  user: $user
+  sudo: true
+
+  tasks:
+    - name: update apt keys
+      command: apt-key update
+
+    - name: update apt
+      apt: update_cache=yes
+
+    - name: Install apache2
+      apt: pkg=apache2 state=present force=yes

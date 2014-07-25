@@ -1,0 +1,9 @@
+---
+
+# Shit that we need to happen up front.
+- hosts: all
+  sudo: true
+
+  tasks:
+    - name: update apt
+      command: apt-get update

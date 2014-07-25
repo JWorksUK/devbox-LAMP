@@ -1,0 +1,7 @@
+---
+- include: playbooks/bootstrap.yml
+- include: playbooks/common.yml
+- include: playbooks/apache.yml
+- include: playbooks/mysql.yml
+- include: playbooks/php.yml
+- include: playbooks/site.yml
