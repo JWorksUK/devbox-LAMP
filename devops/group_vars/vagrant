@@ -6,3 +6,6 @@ serveralias: example.dev
 documentroot: /var/www/site/www
 
 user: vagrant
+
+# MySQL
+mysqlrootpassword: 12345678

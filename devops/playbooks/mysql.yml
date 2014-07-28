@@ -13,3 +13,9 @@
        - mysql-server
        - libapache2-mod-auth-mysql
        - php5-mysql
+
+    # - name: set root mysql password
+    #   command: /usr/bin/mysqladmin -u root password '{{ mysqlrootpassword }}' 
+
+    # - name: mysql_secure_installation
+    #   command: mysql_secure_installation

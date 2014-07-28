@@ -6,11 +6,11 @@
   user: $user
 
   tasks:
-    - name: update apt
-      action: command /usr/bin/apt-get update
-
     - name: install useful stuff
       action: apt pkg={{ item }} state=installed
       with_items:
         - git
+        - ncdu
 
+    - name: set locale to GB
+      command: locale-gen en_GB.UTF-8

@@ -17,7 +17,7 @@
     - name: add apache2 site
       action: template src=files/site.conf.template dest=/etc/apache2/sites-available/{{ servername }}.conf
 
-    - name: chmod the apache2 log files
+    - name: create the apache2 site log folder
       command: mkdir -p /var/log/apache2/{{ servername }}/
 
     - name: enable site
