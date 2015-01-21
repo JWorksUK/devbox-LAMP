@@ -6,11 +6,6 @@
   sudo: True
 
   tasks:
-    # - name: write nginx.conf
-    #   action: template src=files/nginx.conf dest=/etc/nginx/nginx.conf
-    #   tags:
-    #     - finally
-
     - name: grant permissions
       command: chmod 755 {{ documentroot }}
 
